@@ -1,0 +1,22 @@
+name: Build
+on: [push]
+jobs:
+  BuildAndTest:
+    runs-on: ubuntu-18.04
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+      - run: mkdir build
+      - name: CMake
+        working-directory: build
+        run: cmake ..
+      - name: Build
+        working-directory: build
+        run: make -j `nproc`
+      - name: Test
+        working-directory: build
+        run: ./demo
+
