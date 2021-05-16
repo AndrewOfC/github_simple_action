@@ -1,5 +1,10 @@
-name: Build
-on: [push]
+name: Simple Action Example
+on:
+  workflow_dispatch: {}        
+  push:
+      branches:
+        - master
+
 jobs:
   BuildAndTest:
     runs-on: ubuntu-18.04

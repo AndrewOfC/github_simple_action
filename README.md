@@ -1,5 +1,23 @@
 
 
+# Contents
+
+| Directory | Contents |
+| --- | --- |
+| simple_action | Simple CMake project with 1 library |
+| multiple_jobs | Project comprised of multiple libraries and jobs and final linkage |
+
+# Running 
+
+```bash
+$ cd simple_action
+$ mkdir build
+$ cd build
+$ make -j
+$ ./demo
+``` 
+
+
 The heart of your CI in GitHub will be the files in <repo>/.github/workflows/<workflow>.yaml
 
 
