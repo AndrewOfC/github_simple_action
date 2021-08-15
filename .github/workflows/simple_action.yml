@@ -26,3 +26,12 @@ jobs:
         working-directory: simple_action/build
         run: ./demo
 
+##
+## Artifacts
+##
+      - uses: actions/upload-artifact@v2
+        with:
+          name: artifacts
+          path: |
+            simple_action/build/demo
+          retention-days: 1

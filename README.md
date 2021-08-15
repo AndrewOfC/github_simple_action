@@ -14,7 +14,7 @@ $ cd simple_action
 $ mkdir build
 $ cd build
 $ make -j
-$ ./demo
+	⁃	$ ./demo
 ``` 
 
 
