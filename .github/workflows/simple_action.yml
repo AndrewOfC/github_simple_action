@@ -18,7 +18,7 @@ jobs:
         working-directory: simple_action/
       - name: CMake
         working-directory: simple_action/build
-        run: cmake ..
+        run: pwd && ls .. && cmake ..
       - name: Build
         working-directory: simple_action/build
         run: make -j `nproc`
