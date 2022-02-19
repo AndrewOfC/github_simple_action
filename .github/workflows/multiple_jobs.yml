@@ -12,7 +12,7 @@ jobs:
       - run: mkdir build
       - name: CMake
         working-directory: build
-        run: cmake ..
+        run: pwd && ls .. && cmake ..
       - name: Build
         working-directory: build
         run: make -j `nproc`
