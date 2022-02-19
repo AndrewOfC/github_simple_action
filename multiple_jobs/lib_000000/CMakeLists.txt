@@ -4,6 +4,51 @@ set(lib_000000_SOURCES class_000000.cxx
     class_000001.cxx
     class_000002.cxx
     class_000003.cxx
-    class_000004.cxx)
+    class_000004.cxx
+    class_000005.cxx
+    class_000006.cxx
+    class_000007.cxx
+    class_000008.cxx
+    class_000009.cxx
+    class_000010.cxx
+    class_000011.cxx
+    class_000012.cxx
+    class_000013.cxx
+    class_000014.cxx
+    class_000015.cxx
+    class_000016.cxx
+    class_000017.cxx
+    class_000018.cxx
+    class_000019.cxx
+    class_000020.cxx
+    class_000021.cxx
+    class_000022.cxx
+    class_000023.cxx
+    class_000024.cxx
+    class_000025.cxx
+    class_000026.cxx
+    class_000027.cxx
+    class_000028.cxx
+    class_000029.cxx
+    class_000030.cxx
+    class_000031.cxx
+    class_000032.cxx
+    class_000033.cxx
+    class_000034.cxx
+    class_000035.cxx
+    class_000036.cxx
+    class_000037.cxx
+    class_000038.cxx
+    class_000039.cxx
+    class_000040.cxx
+    class_000041.cxx
+    class_000042.cxx
+    class_000043.cxx
+    class_000044.cxx
+    class_000045.cxx
+    class_000046.cxx
+    class_000047.cxx
+    class_000048.cxx
+    class_000049.cxx)
 
 add_library(lib_000000 STATIC ${lib_000000_SOURCES})
