@@ -9,9 +9,9 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v2
-      - run: mkdir build
+      - run: mkdir multiple_jobs/build
       - name: CMake
-        working-directory: build
+        working-directory: mutliple_jobs/build
         run: pwd && ls .. && cmake ..
       - name: Build
         working-directory: build
