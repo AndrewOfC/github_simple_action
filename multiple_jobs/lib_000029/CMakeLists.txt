@@ -1,0 +1,54 @@
+project(lib_000029)
+
+set(lib_000029_SOURCES class_001450.cxx
+    class_001451.cxx
+    class_001452.cxx
+    class_001453.cxx
+    class_001454.cxx
+    class_001455.cxx
+    class_001456.cxx
+    class_001457.cxx
+    class_001458.cxx
+    class_001459.cxx
+    class_001460.cxx
+    class_001461.cxx
+    class_001462.cxx
+    class_001463.cxx
+    class_001464.cxx
+    class_001465.cxx
+    class_001466.cxx
+    class_001467.cxx
+    class_001468.cxx
+    class_001469.cxx
+    class_001470.cxx
+    class_001471.cxx
+    class_001472.cxx
+    class_001473.cxx
+    class_001474.cxx
+    class_001475.cxx
+    class_001476.cxx
+    class_001477.cxx
+    class_001478.cxx
+    class_001479.cxx
+    class_001480.cxx
+    class_001481.cxx
+    class_001482.cxx
+    class_001483.cxx
+    class_001484.cxx
+    class_001485.cxx
+    class_001486.cxx
+    class_001487.cxx
+    class_001488.cxx
+    class_001489.cxx
+    class_001490.cxx
+    class_001491.cxx
+    class_001492.cxx
+    class_001493.cxx
+    class_001494.cxx
+    class_001495.cxx
+    class_001496.cxx
+    class_001497.cxx
+    class_001498.cxx
+    class_001499.cxx)
+
+add_library(lib_000029 STATIC ${lib_000029_SOURCES})

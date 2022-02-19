@@ -1,0 +1,54 @@
+project(lib_000040)
+
+set(lib_000040_SOURCES class_002000.cxx
+    class_002001.cxx
+    class_002002.cxx
+    class_002003.cxx
+    class_002004.cxx
+    class_002005.cxx
+    class_002006.cxx
+    class_002007.cxx
+    class_002008.cxx
+    class_002009.cxx
+    class_002010.cxx
+    class_002011.cxx
+    class_002012.cxx
+    class_002013.cxx
+    class_002014.cxx
+    class_002015.cxx
+    class_002016.cxx
+    class_002017.cxx
+    class_002018.cxx
+    class_002019.cxx
+    class_002020.cxx
+    class_002021.cxx
+    class_002022.cxx
+    class_002023.cxx
+    class_002024.cxx
+    class_002025.cxx
+    class_002026.cxx
+    class_002027.cxx
+    class_002028.cxx
+    class_002029.cxx
+    class_002030.cxx
+    class_002031.cxx
+    class_002032.cxx
+    class_002033.cxx
+    class_002034.cxx
+    class_002035.cxx
+    class_002036.cxx
+    class_002037.cxx
+    class_002038.cxx
+    class_002039.cxx
+    class_002040.cxx
+    class_002041.cxx
+    class_002042.cxx
+    class_002043.cxx
+    class_002044.cxx
+    class_002045.cxx
+    class_002046.cxx
+    class_002047.cxx
+    class_002048.cxx
+    class_002049.cxx)
+
+add_library(lib_000040 STATIC ${lib_000040_SOURCES})
