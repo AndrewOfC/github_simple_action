@@ -14,6 +14,6 @@ jobs:
         working-directory: multiple_jobs/build
         run: pwd && ls .. && cmake ..
       - name: Build
-        working-directory: build
-        run: make -j `nproc`
+        working-directory: multiple_jobs/build
+        run: nproc && make -j `nproc`
     
