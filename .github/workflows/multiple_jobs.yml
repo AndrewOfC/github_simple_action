@@ -9,16 +9,16 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v2
-      - run: mkdir build
+      - run: multiple_jobs/build
       - name: CMake
-        working-directory: build
+        working-directory: multiple_jobs/build
         run: cmake ..
       - name: Build
-        working-directory: build
+        working-directory: multiple_jobs/build
         run: make -j `nproc`
       - name: Save Exe
         uses: actions/upload-artifact@v2
-        with:
-          name: demo
-          path: build/demo
+          with:
+            name: demo
+            path: build/demo
     
