@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v2
-      - run: multiple_jobs/build
+      - run: mkdir -p multiple_jobs/build
       - name: CMake
         working-directory: multiple_jobs/build
         run: cmake ..
