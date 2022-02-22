@@ -25,4 +25,10 @@ jobs:
       - name: Test
         working-directory: simple_action/build
         run: ./demo
+      - name: Save Exe
+        uses: actions/upload-artifact@v2
+        with:
+          name: demo
+          path: simple_action/build/demo
+          retention-days: 7
 
