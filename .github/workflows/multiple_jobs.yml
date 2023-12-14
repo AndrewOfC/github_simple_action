@@ -10,13 +10,13 @@ jobs:
       ##
       ##
       ##
-      runs-on: ubuntu-18.04
+      runs-on: ubuntu-latest
       defaults:
         run:
           shell: bash
       steps:
         - name: Check out repository
-          uses: actions/checkout@v2
+          uses: actions/checkout@v4
         - run: mkdir multiple_jobs/build
         - name: CMake
           working-directory: multiple_jobs/build
@@ -25,7 +25,7 @@ jobs:
           working-directory: multiple_jobs/build
           run: make -j `nproc` lib_000000
         - name: Save Lib
-          uses: actions/upload-artifact@v2
+          uses: actions/upload-artifact@v4
           with:
             name: file_lib_000000
             path: multiple_jobs/build/lib_000000/liblib_000000.a
@@ -35,13 +35,13 @@ jobs:
       ##
       ##
       ##
-      runs-on: ubuntu-18.04
+      runs-on: ubuntu-latest
       defaults:
         run:
           shell: bash
       steps:
         - name: Check out repository
-          uses: actions/checkout@v2
+          uses: actions/checkout@v4
         - run: mkdir multiple_jobs/build
         - name: CMake
           working-directory: multiple_jobs/build
@@ -50,7 +50,7 @@ jobs:
           working-directory: multiple_jobs/build
           run: make -j `nproc` lib_000001
         - name: Save Lib
-          uses: actions/upload-artifact@v2
+          uses: actions/upload-artifact@v4
           with:
             name: file_lib_000001
             path: multiple_jobs/build/lib_000001/liblib_000001.a
@@ -60,13 +60,13 @@ jobs:
       ##
       ##
       ##
-      runs-on: ubuntu-18.04
+      runs-on: ubuntu-latest
       defaults:
         run:
           shell: bash
       steps:
         - name: Check out repository
-          uses: actions/checkout@v2
+          uses: actions/checkout@v4
         - run: mkdir multiple_jobs/build
         - name: CMake
           working-directory: multiple_jobs/build
@@ -75,7 +75,7 @@ jobs:
           working-directory: multiple_jobs/build
           run: make -j `nproc` lib_000002
         - name: Save Lib
-          uses: actions/upload-artifact@v2
+          uses: actions/upload-artifact@v4
           with:
             name: file_lib_000002
             path: multiple_jobs/build/lib_000002/liblib_000002.a
@@ -86,13 +86,13 @@ jobs:
       ##
       ##
       ##
-      runs-on: ubuntu-18.04
+      runs-on: ubuntu-latest
       defaults:
         run:
           shell: bash
       steps:
         - name: Check out repository
-          uses: actions/checkout@v2
+          uses: actions/checkout@v4
         - run: mkdir multiple_jobs/build
         - name: CMake
           working-directory: multiple_jobs/build
@@ -101,7 +101,7 @@ jobs:
           working-directory: multiple_jobs/build
           run: make -j `nproc` lib_000003
         - name: Save Lib
-          uses: actions/upload-artifact@v2
+          uses: actions/upload-artifact@v4
           with:
             name: file_lib_000003
             path: multiple_jobs/build/lib_000003/liblib_000003.a
@@ -112,13 +112,13 @@ jobs:
       ##
       ##
       ##
-      runs-on: ubuntu-18.04
+      runs-on: ubuntu-latest
       defaults:
         run:
           shell: bash
       steps:
         - name: Check out repository
-          uses: actions/checkout@v2
+          uses: actions/checkout@v4
         - run: mkdir multiple_jobs/build
         - name: CMake
           working-directory: multiple_jobs/build
@@ -127,7 +127,7 @@ jobs:
           working-directory: multiple_jobs/build
           run: make -j `nproc` lib_000004
         - name: Save Lib
-          uses: actions/upload-artifact@v2
+          uses: actions/upload-artifact@v4
           with:
             name: file_lib_000004
             path: multiple_jobs/build/lib_000004/liblib_000004.a
@@ -140,37 +140,37 @@ jobs:
   ##
   demo:
     needs: [ lib_000000, lib_000001, lib_000002, lib_000003, lib_000004 ]
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     defaults:
       run:
         shell: bash
     steps:
       - name: Check out repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Build Dir
         run: mkdir multiple_jobs/build
       - name: download_lib_000000
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: file_lib_000000
           path: multiple_jobs/build
       - name: download_lib_000001
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: file_lib_000001
           path: multiple_jobs/build
       - name: download_lib_000002
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: file_lib_000002
           path: multiple_jobs/build
       - name: download_lib_000003
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: file_lib_000003
           path: multiple_jobs/build
       - name: download_lib_000004
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: file_lib_000004
           path: multiple_jobs/build      
@@ -195,7 +195,7 @@ jobs:
         run: ./demo
 
   Cleanup:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     needs: [ demo ]
     steps:
       - uses: geekyeggo/delete-artifact@v1
