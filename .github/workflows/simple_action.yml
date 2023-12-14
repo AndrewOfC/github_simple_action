@@ -13,7 +13,7 @@ jobs:
         shell: bash
     steps:
       - name: Check out repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - run: mkdir build
         working-directory: simple_action/
       - name: CMake
@@ -26,7 +26,7 @@ jobs:
         working-directory: simple_action/build
         run: ./demo
       - name: Save Exe
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: demo
           path: simple_action/build/demo
